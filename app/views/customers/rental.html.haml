@@ -1,0 +1,14 @@
+%h1 Rental
+%p Here you can check the rental in progress or done.
+%p
+  As your can see, the database is a bit old... But you can still filter on the dates.
+  Let's try the filter <code>= Feb 2006</code> on rental date,
+  and <code>&lt;NULL&gt;</code> operator on Return date.
+%p
+  One second filtering about the data you want...
+  How, and guess what? One click to dowload the excel version! (check action bar ;-) )
+
+=RailsPowergrid::grid 'rentals'
+
+%h3 app/grids/rentals_grid.rb
+%pre=File.read("#{Rails.root}/app/grids/rentals_grid.rb")

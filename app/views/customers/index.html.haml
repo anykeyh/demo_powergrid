@@ -1,0 +1,21 @@
+%h1 Customers
+
+%p
+  Here you can check all the customers inside the database.
+  You can still filter them by store, even if the name of the store is inside this path:
+  %pre model.store.address.city.name
+%p
+  You can use filters to check
+
+=RailsPowergrid::grid 'customers'
+
+%h2 Developer side
+
+%h3 app/grids/customers_grid.rb
+%pre=File.read("#{Rails.root}/app/grids/customers_grid.rb")
+
+%p
+  Easy, isn't? :)
+%p
+  There's infinite scrolling, and we tried to optimize the rendering of the grid.
+  It looks like capable of handling thousands of lines! :)

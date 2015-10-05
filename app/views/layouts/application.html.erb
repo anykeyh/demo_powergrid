@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DemoPowergrid</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="sidebar">
+<%= render partial: "sidebar" %>
+</div>
+<div class ="content">
+<%= yield %>
+</div>
+
+</body>
+<script>
+/* Fix weird issue */
+window.onunload = function(){};
+</script>
+</html>

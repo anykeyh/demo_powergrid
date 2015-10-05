@@ -1,0 +1,9 @@
+%h1 Manage the store
+
+%p On this page you can add and remove staff from store.
+%p You have also access to some statistics about each store.
+
+%div{style: "width: 50%; display: inline-block; margin-left: -4px; margin-right: -4px;"}
+  =RailsPowergrid::grid("stores")
+%div{style: "width: 50%; display: inline-block; margin-left: -4px; margin-right: -4px;"}
+  =RailsPowergrid::grid("stores", id: "powergrid_store2")
