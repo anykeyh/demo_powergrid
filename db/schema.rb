@@ -11,10 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151002160943) do
+ActiveRecord::Schema.define(version: 20151008082822) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "citext"
 
   create_table "actors", force: :cascade do |t|
     t.string   "first_name", limit: 45,                                 null: false
@@ -67,16 +68,15 @@ ActiveRecord::Schema.define(version: 20151002160943) do
   add_index "countries", ["created_at"], name: "index_countries_on_created_at", using: :btree
 
   create_table "customers", force: :cascade do |t|
-    t.integer  "store_id",    limit: 2,                                  null: false
-    t.string   "first_name",  limit: 45,                                 null: false
-    t.string   "last_name",   limit: 45,                                 null: false
-    t.string   "email",       limit: 50
-    t.integer  "address_id",  limit: 2,                                  null: false
-    t.boolean  "activebool",             default: true,                  null: false
-    t.date     "create_date",                                            null: false
-    t.datetime "updated_at",             default: '2015-09-26 09:49:52'
+    t.integer  "store_id",   limit: 2,                                  null: false
+    t.citext   "first_name",                                            null: false
+    t.string   "last_name",  limit: 45,                                 null: false
+    t.string   "email",      limit: 50
+    t.integer  "address_id", limit: 2,                                  null: false
+    t.boolean  "activebool",            default: true,                  null: false
+    t.datetime "updated_at",            default: '2015-09-26 09:49:52'
     t.integer  "active"
-    t.datetime "created_at",             default: '2015-09-26 09:49:53', null: false
+    t.datetime "created_at",            default: '2015-09-26 09:49:53', null: false
   end
 
   add_index "customers", ["address_id"], name: "idx_fk_address_id", using: :btree

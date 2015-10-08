@@ -26,7 +26,6 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'rails_powergrid', git: "https://github.com/anykeyh/rails_powergrid.git", branch: "master"
-
 gem "compass-rails", github: "Compass/compass-rails", branch: "master"
 
 gem 'chronic'

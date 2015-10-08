@@ -10,7 +10,7 @@ GIT
 
 GIT
   remote: https://github.com/anykeyh/rails_powergrid.git
-  revision: 95e45437956deb25426a26268702740b81862ace
+  revision: 20be8d8af7e3a358dfd55aed25c4e8e976d87a7f
   branch: master
   specs:
     rails_powergrid (0.0.1)

@@ -13,6 +13,14 @@ class Customer < ActiveRecord::Base
     [first_name, last_name].join(' ')
   end
 
+  def set_address_field field, value
+    if self.address.nil?
+      self.address = Address.new
+    end
+
+    self.address.send("#{field}=", value)
+  end
+
   def is_active?
     activebool
   end
